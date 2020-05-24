@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class= "container">
+    <h1 class= "text-center">{{title}}</h1>
+    {% for image in images%}
+    <img onclick="showModal('{{image.name}}','{{image.description}}','{{image.image.url}}','{{image.location}}','{{image.category}}')" class="image" src="{{image.image.url}}">
+    <h2>{{image.name}}</h1>
+
+    {% endfor%}
+</div>
+{% endblock%}
